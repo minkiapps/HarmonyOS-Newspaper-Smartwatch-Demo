@@ -1,0 +1,77 @@
+{
+  "app": {
+    "bundleName": "com.minkiapps.newspaper.test",
+    "vendor": "minkiapps",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.minkiapps.newspaper.test",
+    "metaData": {
+      "customizeData": [
+        {
+          "name": "hwc-theme",
+          "value": "androidhwext:style/Theme.Emui.Dark.NoActionBar"
+        }
+      ]
+    },
+    "name": ".MyApplication",
+    "mainAbility": "com.minkiapps.newspaper.test.MainAbility",
+    "deviceType": [
+      "wearable"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "portrait",
+        "name": "com.minkiapps.newspaper.test.MainAbility",
+        "icon": "$media:icon",
+        "type": "page",
+        "label": "$string:app_name",
+        "launchType": "standard"
+      },
+      {
+        "name": "com.minkiapps.newspaper.test.slice.ArticleDetailAbility",
+        "type": "page"
+      }
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.INTERNET",
+        "usedScene": {
+          "ability": [
+            "com.minkiapps.newspaper.test.slice.MainAbilitySlice"
+          ],
+          "when": "inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.VIBRATE",
+        "usedScene": {
+          "ability": [
+            "com.minkiapps.newspaper.test.slice.MainAbilitySlice"
+          ],
+          "when": "inuse"
+        }
+      }
+    ]
+  }
+}

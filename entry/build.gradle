@@ -1,0 +1,47 @@
+apply plugin: 'com.huawei.ohos.hap'
+apply plugin: 'com.huawei.ohos.decctest'
+//For instructions on signature configuration, see https://developer.harmonyos.com/en/docs/documentation/doc-guides/ide_debug_device-0000001053822404#EN-US_TOPIC_0000001154985555__section1112183053510
+
+ohos {
+    signingConfigs {
+        debug {
+            storeFile file('../signing/default.p12')
+            storePassword '00000018B9F50DDC998672CCD92146091F9F5F411F3836DB6850AEF49561A436024CEDE30AD1D926'
+            keyAlias = 'minkiapps'
+            keyPassword '0000001846489F1D9A9ACD2EAB9BEB71CB73E4741BE96336F51DC3954AB37332CB8FAA23A3E6FD50'
+            signAlg = 'SHA256withECDSA'
+            profile file('../signing/default.p7b')
+            certpath file('../signing/default.cer')
+        }
+    }
+    compileSdkVersion 5
+    defaultConfig {
+        compatibleSdkVersion 4
+    }
+    buildTypes {
+        release {
+            proguardOpt {
+                proguardEnabled false
+                rulesFiles 'proguard-rules.pro'
+            }
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.5.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation "com.squareup.retrofit2:converter-moshi:2.6.0"
+
+    implementation 'io.openharmony.tpc.thirdlib:glide:1.0.6'
+    implementation 'io.openharmony.tpc.thirdlib:CircularProgressView:1.0.1'
+
+    testImplementation 'junit:junit:4.13'
+    ohosTestImplementation 'com.huawei.ohos.testkit:runner:1.0.0.100'
+}
+decc {
+    supportType = ['html', 'xml']
+}

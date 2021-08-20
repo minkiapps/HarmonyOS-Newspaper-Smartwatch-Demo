@@ -1,0 +1,16 @@
+{
+  "color": [
+    {
+      "name": "ci_blue",
+      "value": "#0066cc"
+    },
+    {
+      "name": "ci_white",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "ci_grey",
+      "value": "#555555"
+    }
+  ]
+}

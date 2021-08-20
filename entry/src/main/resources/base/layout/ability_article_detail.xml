@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    ohos:scrollbar_background_color="$color:ci_white"
+    ohos:scrollbar_color="#555555"
+    ohos:scrollbar_fading_delay="1500"
+    ohos:id="$+id:s_ability_article_detail"
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:background_element="#000000"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <DirectionalLayout
+        ohos:top_padding="60vp"
+        ohos:bottom_padding="60vp"
+        ohos:orientation="vertical"
+        ohos:width="match_content"
+        ohos:height="match_content">
+
+        <Image
+            ohos:scale_mode="center"
+            ohos:id="$+id:i_ability_article_detail"
+            ohos:height="match_content"
+            ohos:width="match_parent"/>
+
+        <Text
+            ohos:id="$+id:t_ability_article_detail_title"
+            ohos:text_color="$color:ci_white"
+            ohos:text_size="15vp"
+            ohos:padding="2vp"
+            ohos:text_weight="800"
+            ohos:multiple_lines="true"
+            ohos:start_margin="16vp"
+            ohos:end_margin="16vp"
+            ohos:text="Lorem ipsum is placeholder text"
+            ohos:background_element="$color:ci_blue"
+            ohos:top_margin="8vp"
+            ohos:height="match_parent"
+            ohos:width="match_content"/>
+
+        <Text
+            ohos:text_size="14vp"
+            ohos:multiple_lines="true"
+            ohos:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            ohos:text_color="$color:ci_white"
+            ohos:id="$+id:t_ability_article_detail_content"
+            ohos:top_margin="8vp"
+            ohos:start_padding="24vp"
+            ohos:end_padding="24vp"
+            ohos:height="match_content"
+            ohos:width="match_parent"/>
+
+    </DirectionalLayout>
+
+</ScrollView>

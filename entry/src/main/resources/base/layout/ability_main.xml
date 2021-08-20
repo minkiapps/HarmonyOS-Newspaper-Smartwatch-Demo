@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StackLayout
+    ohos:background_element="#000000"
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <ListContainer
+        ohos:scrollbar_background_color="$color:ci_white"
+        ohos:scrollbar_color="#555555"
+        ohos:rebound_effect="true"
+        ohos:orientation="vertical"
+        ohos:visibility="hide"
+        ohos:id="$+id:lc_ability_main"
+        ohos:height="match_parent"
+        ohos:width="match_parent"/>
+
+    <com.github.rahatarmanahmed.cpv.CircularProgressView
+        ohos:id="$+id:cpv_ability_main"
+        ohos:height="50vp"
+        ohos:width="50vp"
+        ohos:cpv_animDuration="8000"
+        ohos:layout_alignment="center"
+        ohos:cpv_animAutostart="true"
+        ohos:cpv_indeterminate="true"
+        ohos:cpv_thickness="8"/>
+
+    <DirectionalLayout
+        ohos:id="$+id:dl_ability_main_error_container"
+        ohos:orientation="vertical"
+        ohos:height="match_parent"
+        ohos:width="match_parent">
+
+        <Image
+            ohos:top_margin="64vp"
+            ohos:layout_alignment="horizontal_center"
+            ohos:image_src="$media:error"
+            ohos:height="match_content"
+            ohos:width="match_content"/>
+
+        <Text
+            ohos:id="$+id:t_ability_main_error"
+            ohos:text_alignment="center"
+            ohos:text_color="$color:ci_white"
+            ohos:start_margin="32vp"
+            ohos:end_margin="32vp"
+            ohos:multiple_lines="true"
+            ohos:height="match_content"
+            ohos:width="match_parent"/>
+
+        <Text
+            ohos:layout_alignment="horizontal_center"
+            ohos:top_margin="16vp"
+            ohos:background_element="$graphic:retry_button_background"
+            ohos:bottom_padding="8vp"
+            ohos:end_padding="24vp"
+            ohos:start_padding="24vp"
+            ohos:height="match_content"
+            ohos:id="$+id:t_ability_main_btn_retry"
+            ohos:text="$string:retry"
+            ohos:text_color="$color:ci_white"
+            ohos:text_size="15fp"
+            ohos:top_padding="8vp"
+            ohos:width="match_content"/>
+
+    </DirectionalLayout>
+
+</StackLayout>
